@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C1373B38-7FE6-4471-B103-0891FE8701BF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UserInterface</RootNamespace>
+    <AssemblyName>UserInterface</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.2.0.0\lib\net35-Client\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.3.0.0\lib\net35-Client\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="RealTimeMonitoring_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealTimeMonitoring_Form.Designer.cs">
+      <DependentUpon>RealTimeMonitoring_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home_Form.Designer.cs">
+      <DependentUpon>Home_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn_Form.Designer.cs">
+      <DependentUpon>LogIn_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MotionData_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MotionData_Form.Designer.cs">
+      <DependentUpon>MotionData_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager_Form.Designer.cs">
+      <DependentUpon>Manager_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectDiffPatient_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectDiffPatient_Form.Designer.cs">
+      <DependentUpon>SelectDiffPatient_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SendMail_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SendMail_Form.Designer.cs">
+      <DependentUpon>SendMail_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen_Form.Designer.cs">
+      <DependentUpon>SplashScreen_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils.cs" />
+    <EmbeddedResource Include="MotionData_Form.resx">
+      <DependentUpon>MotionData_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home_Form.resx">
+      <DependentUpon>Home_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn_Form.resx">
+      <DependentUpon>LogIn_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager_Form.resx">
+      <DependentUpon>Manager_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealTimeMonitoring_Form.resx">
+      <DependentUpon>RealTimeMonitoring_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectDiffPatient_Form.resx">
+      <DependentUpon>SelectDiffPatient_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SendMail_Form.resx">
+      <DependentUpon>SendMail_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen_Form.resx">
+      <DependentUpon>SplashScreen_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Backend\Backend.csproj">
+      <Project>{1fb49fa6-5438-437e-8ea7-2e4929e39ed5}</Project>
+      <Name>BackendCS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hintergrund.jpeg" />
+    <Content Include="hintergrund.png" />
+    <Content Include="Images\Logo\8-ACN09NAKswNNpM6.png" />
+    <Content Include="Images\Logo\8-bKHUJqZxDOiXTfY.png" />
+    <Content Include="Images\Logo\8-LwAHYnc41Z7sV7y.png" />
+    <Content Include="Images\Logo\8-M0oHIvxKcREW75x %281%29.png" />
+    <Content Include="Images\Logo\8-M0oHIvxKcREW75x.png" />
+    <Content Include="Images\Logo\8-MchFtvUIzjWElaS.png" />
+    <Content Include="Images\Logo\8-PLMKo9rw3gyAE4H - Kopie.ico" />
+    <Content Include="Images\Logo\8-PLMKo9rw3gyAE4H.png" />
+    <Content Include="Images\Logo\8-vyDL1KSdQoJXBiF.png" />
+    <Content Include="Images\Logo\8-YPCj73ElaPWz19B.png" />
+    <Content Include="Images\Logo\8-Z26ZLK6z8voxJob.png" />
+    <None Include="Resources\Ok1.png" />
+    <None Include="Resources\Danger.png" />
+    <None Include="Resources\Good.png" />
+    <None Include="Resources\Ok.png" />
+    <None Include="Resources\Design - RealTimeMonitoring.png" />
+    <None Include="Resources\Design-MotionData.png" />
+    <None Include="Resources\Design_SelectPatient Screen1.png" />
+    <None Include="Resources\Design_SelectPatient Screen.png" />
+    <None Include="Resources\Design_EMail.png" />
+    <None Include="Resources\Home_Design1.png" />
+    <None Include="Resources\Home_Design.png" />
+    <None Include="Resources\Feinentwurf Home V2 %282%29.png" />
+    <None Include="Resources\Feinentwurf Home V2 %281%29.png" />
+    <None Include="Resources\Feinentwurf Home V2.png" />
+    <None Include="Resources\Login_Template - LoginButton.png" />
+    <None Include="Resources\Login_Template - Background.png" />
+    <None Include="Resources\Design Login2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fonts\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
